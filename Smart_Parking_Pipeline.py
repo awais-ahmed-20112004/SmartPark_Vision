@@ -20,7 +20,7 @@ from google.colab import files
 from ultralytics import YOLO
 
 THRESHOLD = 869        # classical pixel-count cutoff (fallback method)
-CONF      = 0.45       # YOLO confidence (0.35 - 0.55)
+CONF      = 0.10       # YOLO confidence (0.35 - 0.55)
 METHOD    = "yolo"      # "yolo" (robust) or "classical" (fast, no GPU)
 
 VIDEO_PATH = None       # set after upload in the next cell
