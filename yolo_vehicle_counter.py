@@ -10,7 +10,7 @@ the classical method.
 
 - 'yolov8n.pt' downloads automatically on first run.
 - imgsz=1280 keeps full resolution so small aerial cars are not lost.
-- CONF = 0.25 (tuned): the aerial PKLot feed shows cars as small/low-confidence
+- CONF = 0.10 (tuned): the aerial PKLot feed shows cars as small/low-confidence
   objects, so 0.45 missed them; 0.25 recovers them at a small precision cost.
 
 COCO class ids: 2 = car, 5 = bus, 7 = truck.
@@ -24,7 +24,7 @@ from ultralytics import YOLO
 
 VIDEO_PATH = "data/parking_lot.mp4"   # <-- change to your video path
 MODEL = "yolov8n.pt"
-CONF = 0.25                           # tuned (aerial cars are low-confidence)
+CONF = 0.10                           # tuned (aerial cars are low-confidence)
 IMGSZ = 1280
 VEHICLE_CLASSES = {2: "car", 5: "bus", 7: "truck"}
 
